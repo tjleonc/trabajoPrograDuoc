@@ -34,6 +34,7 @@ body{
     transform: translateY(-50%);
 }
 
+
 .navbar{
     width: 1440px;
     margin: auto;
@@ -45,8 +46,10 @@ body{
     bottom: 0;
     width: 1440px;
     color: white;
-    margin-left: 250px;
+    margin: auto;
 }
+
+
 
 
 #container{
