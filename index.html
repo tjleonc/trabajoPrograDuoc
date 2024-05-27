@@ -9,30 +9,61 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: rgb(110, 109, 109);">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">Quienes somos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="/pages/Precios.html">Precios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="pages/Contacto.html">Contacto</a>
-              </li>
-            </ul>
+  <nav class="navbar navbar-expand-lg" style="background-color: rgb(110, 109, 109);">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#l">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="pages/QuienesSomos.html">Quienes somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="pages/Precios.html">Precios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="pages/Contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="carrito">
+      <a href="" onclick="showCart(event)" class="carrito"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+        <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+      </svg>
+      <div id="contador">
+        <span class="contador">
+          0
+        </span>
+      </div>
+      <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cartModalLabel">Carrito de compras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Add your product list here -->
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Comprar</button>
+              
+            </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </a>
+    </div>
+  </nav>
+
 
       <div id="carouselExample" class="carousel slide custom-carousel">
         <div class="carousel-inner">
@@ -67,12 +98,6 @@
 
 </footer>
 
-
-
-
-
-
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

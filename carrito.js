@@ -4,10 +4,16 @@ let containerBuyCart = document.querySelector('.modal-body');
 let cartModalInstance;
 let amountProduct = document.querySelector('.contador');
 
-let modalCarro = [];
-let countProduct = 0;
+let modalCarro = JSON.parse(localStorage.getItem('modalCarro')) || [];
+if (!Array.isArray(modalCarro)) {
+    // Si los datos recuperados no son un array, inicializar como un array vacío
+    modalCarro = [];
+}
+let countProduct = JSON.parse(localStorage.getItem('countProduct')) || 0;
+let totalCarro = 0;
 //funciones
 loadEventListener();
+loadHTML();
 
 function loadEventListener(){
     card.addEventListener('click', addProduct);
@@ -18,7 +24,6 @@ function loadEventListener(){
 function addProduct(e){
     e.preventDefault();
     if(e.target.classList.contains('agregarCarrito')){
-/*         console.log(e.target.parentElement) */
         const selectedProduct = e.target.parentElement;
         readContent(selectedProduct);
     }
@@ -62,6 +67,7 @@ function readContent(product){
 
 
 
+
 function loadHTML(){
     containerBuyCart.innerHTML = '';
     modalCarro.forEach(product => {
@@ -84,10 +90,6 @@ function loadHTML(){
 
 }
 
-function clearHTML(){
-    containerBuyCart.innerHTML = '';
-}
-
 function showCart(e) {
     e.preventDefault();
     if (!cartModalInstance) {
@@ -102,8 +104,28 @@ function deleteProduct(e) {
     if (e.target.classList.contains('borrar-item')) {
         const productId = e.target.getAttribute('data-id');
         modalCarro = modalCarro.filter(product => product.id !== productId);
-        loadHTML();
+        loadHTML()
+        countProduct--;
+        amountProduct.innerHTML = countProduct;
     }
-    countProduct--
-    amountProduct.innerHTML = countProduct;
+    saveCartToLocalStorage();
+    updateItemCounter();
+
 }
+
+
+function saveCartToLocalStorage(){
+    localStorage.setItem('modalCarro', JSON.stringify(modalCarro));
+    localStorage.setItem('countProduct', JSON.stringify(countProduct));
+}
+
+function updateItemCounter() {
+    const itemCount = modalCarro.reduce((total, product) => total + product.cantidad, 0);
+    const contadorElement = document.querySelector('.contador');
+    contadorElement.textContent = itemCount;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadHTML();
+    updateItemCounter();
+});
