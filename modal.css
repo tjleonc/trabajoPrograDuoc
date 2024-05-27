@@ -1,0 +1,44 @@
+#modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modal2::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modal3::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal{
+    max-width: 50ch; /* ch = caracteres */
+
+}
+#abrirModal, #abrirModal2, #abrirModal3 {
+    background: #9ba3a8;
+    background-image: -webkit-linear-gradient(top, #9ba3a8, #bcbfc2);
+    background-image: -moz-linear-gradient(top, #9ba3a8, #bcbfc2);
+    background-image: -ms-linear-gradient(top, #9ba3a8, #bcbfc2);
+    background-image: -o-linear-gradient(top, #9ba3a8, #bcbfc2);
+    background-image: linear-gradient(to bottom, #9ba3a8, #bcbfc2);
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    border-radius: 17px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+#abrirModal:hover, #abrirModal2:hover, #abrirModal3:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+div .item{
+    color: black;
+}

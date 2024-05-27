@@ -33,6 +33,35 @@
             </ul>
           </div>
         </div>
+        <div id="carrito">
+          <a href="carrito.html" onclick="showCart(this)" class="carrito"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+            <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+          </svg>
+          <div id="contador">
+            <span class="contador">
+              0
+            </span>
+          </div>
+          <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cartModalLabel">Carrito de compras</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Add your product list here -->
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        </div>
       </nav>
 
       <div id="container" class="col-md-6 offset-md-3">
@@ -75,19 +104,20 @@
 
 
 
-      <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-md-4">
-                    <h3>Redes Sociales</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>Twitter</li>
-                    </ul>
-                </div>
-    
-    </footer>
+<footer id="footer" class="footer">
+  <div class="container">
+      <div class="row">
+          <div >
+              <h3>Redes Sociales</h3>
+              <ul>
+                  <li>Facebook</li>
+                  <li>Instagram</li>
+                  <li>Twitter</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer> 
 
 
 
