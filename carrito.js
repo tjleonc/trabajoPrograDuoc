@@ -21,11 +21,15 @@ function loadEventListener(){
     containerBuyCart.addEventListener('click', deleteProduct);
 }
 
-function addProduct(e){
+function addProduct(e) {
     e.preventDefault();
-    if(e.target.classList.contains('agregarCarrito')){
-        const selectedProduct = e.target.parentElement;
-        readContent(selectedProduct);
+    if (e.target.classList.contains('agregarCarrito')) {
+        if (countProduct < 10) { // Verifica si el carrito tiene menos de 10 productos, por algun razón me agrega solo 1 vez los productos y luego solo aumenta la cantidad, pero dejo el limite de 10 productos de todos modos
+            const selectedProduct = e.target.parentElement;
+            readContent(selectedProduct);
+        } else {
+            alert('No puedes agregar más de 10 artículos al carrito.');
+        }
     }
 }
 
